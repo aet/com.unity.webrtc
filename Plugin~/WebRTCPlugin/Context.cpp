@@ -320,8 +320,6 @@ namespace webrtc
 
     VideoTrackSourceInterface* Context::CreateVideoSource(NativeTexPtr ptr, IGraphicsDevice* device, UnityRenderingExtTextureFormat format, uint32_t memoryType)
     {
-        //IGraphicsDevice* device = GraphicsUtility::GetGraphicsDevice();
-
         const rtc::scoped_refptr<UnityVideoTrackSource> source =
             new rtc::RefCountedObject<UnityVideoTrackSource>(
                 device, ptr, format, memoryType, false, absl::nullopt);
