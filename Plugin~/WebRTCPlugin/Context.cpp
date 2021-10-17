@@ -12,11 +12,13 @@
 #include "UnityVideoEncoderFactory.h"
 #include "UnityVideoDecoderFactory.h"
 #include "UnityVideoTrackSource.h"
-#include "../NvCodec/Utils/Logger.h"
 #include "GraphicsDevice/GraphicsUtility.h"
 #include "GraphicsDevice/IGraphicsDevice.h"
 
+#if CUDA_PLATFORM
+#include "../NvCodec/Utils/Logger.h"
 simplelogger::Logger* logger = simplelogger::LoggerFactory::CreateConsoleLogger();
+#endif
 
 using namespace ::webrtc;
 
