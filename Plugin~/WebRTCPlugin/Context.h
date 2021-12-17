@@ -96,6 +96,9 @@ namespace webrtc
         // Video Source
         webrtc::VideoTrackSourceInterface* CreateVideoSource();
 
+        FrameTransformerInterface* CreateFrameTransformer(
+            DelegateTransformedFrame callback);
+
         // MediaStreamTrack
         webrtc::VideoTrackInterface* CreateVideoTrack(const std::string& label, webrtc::VideoTrackSourceInterface* source);
         webrtc::AudioTrackInterface* CreateAudioTrack(const std::string& label, webrtc::AudioSourceInterface* source);

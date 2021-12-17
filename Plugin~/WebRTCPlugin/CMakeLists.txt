@@ -41,6 +41,8 @@ target_sources(WebRTCLib
     UnityAudioEncoderFactory.h
     UnityAudioTrackSource.cpp
     UnityAudioTrackSource.h
+    EncodedStreamTransformer.cpp
+    EncodedStreamTransformer.h
     WebRTCConstants.h
     WebRTCMacros.h
     WebRTCPlugin.h

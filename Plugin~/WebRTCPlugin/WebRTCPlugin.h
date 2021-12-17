@@ -34,6 +34,9 @@ namespace webrtc
         void(*)(UnityVideoRenderer* renderer,
             int width,
             int height);
+    using DelegateTransformedFrame =
+        void(*)(webrtc::FrameTransformerInterface*,
+            ::webrtc::TransformableFrameInterface*);
 
     void debugLog(const char* buf);
     extern DelegateDebugLog delegateDebugLog;

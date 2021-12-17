@@ -72,10 +72,14 @@ namespace Unity.WebRTC
             NativeMethods.ContextAddRefPtr(self, ptr);
         }
 
-
         public void DeleteRefPtr(IntPtr ptr)
         {
             NativeMethods.ContextDeleteRefPtr(self, ptr);
+        }
+
+        public IntPtr CreateFrameTransformer(DelegateTransformedFrame callback)
+        {
+            return NativeMethods.ContextCreateFrameTransformer(self, callback);
         }
 
         public EncoderType GetEncoderType()

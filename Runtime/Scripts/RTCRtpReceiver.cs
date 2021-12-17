@@ -66,6 +66,14 @@ namespace Unity.WebRTC
             }
         }
 
+        public RTCRtpTransform Transform
+        {
+            set
+            {
+                NativeMethods.ReceiverSetTransform(GetSelfOrThrow(), value.self);
+            }
+        }
+
         public IEnumerable<MediaStream> Streams
         {
             get
