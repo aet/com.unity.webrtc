@@ -91,8 +91,7 @@ namespace webrtc
         webrtc::AudioSourceInterface* CreateAudioSource();
 
         // Video Source
-        webrtc::VideoTrackSourceInterface* CreateVideoSource(
-            NativeTexPtr ptr, IGraphicsDevice* device, UnityRenderingExtTextureFormat format, uint32_t memoryType);
+        webrtc::VideoTrackSourceInterface* CreateVideoSource();
 
         // MediaStreamTrack
         webrtc::VideoTrackInterface* CreateVideoTrack(const std::string& label, webrtc::VideoTrackSourceInterface* source);
