@@ -76,9 +76,6 @@ namespace Unity.WebRTC
         {
             set
             {
-                //if (value.Kind != Track.Kind)
-                //    throw new InvalidOperationException(
-                //        $"Transform.Kind is {value.Kind}, but Sender.Track.Kind is {Track.Kind}.");
                 NativeMethods.SenderSetTransform(GetSelfOrThrow(), value.self);
             }
         }
