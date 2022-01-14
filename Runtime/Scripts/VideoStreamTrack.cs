@@ -151,8 +151,6 @@ namespace Unity.WebRTC
         {
             WebRTC.ValidateTextureSize(width, height, Application.platform, WebRTC.GetEncoderType());
             WebRTC.ValidateGraphicsFormat(format);
-            //WebRTC.Context.SetVideoEncoderParameter(GetSelfOrThrow(), width, height, format, texturePtr);
-            //WebRTC.Context.InitializeEncoder(GetSelfOrThrow());
         }
 
         /// <summary>
@@ -194,7 +192,6 @@ namespace Unity.WebRTC
             {
                 if (m_source != null)
                 {
-                    //WebRTC.Context.FinalizeEncoder(self);
                     if (RenderTexture.active == m_destTexture)
                         RenderTexture.active = null;
                 }
