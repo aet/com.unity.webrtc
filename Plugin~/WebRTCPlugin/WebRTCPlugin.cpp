@@ -237,8 +237,6 @@ extern "C"
             return false;
         }
 #endif
-        // todo(kazuki): 
-        //return EncoderFactory::GetHardwareEncoderSupport();
         return true;
     }
 
