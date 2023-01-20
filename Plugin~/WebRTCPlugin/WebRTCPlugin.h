@@ -151,6 +151,13 @@ namespace webrtc
         bool voiceActivityDetection;
     };
 
+    struct BitrateSettings
+    {
+        int minBitrateBps;
+        int startBitrateBps;
+        int maxBitrateBps;
+    };
+
     class IGraphicsDevice;
     class ProfilerMarkerFactory;
     class Plugin

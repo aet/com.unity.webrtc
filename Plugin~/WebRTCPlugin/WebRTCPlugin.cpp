@@ -620,6 +620,12 @@ extern "C"
         return obj->SetConfiguration(std::string(conf));
     }
 
+    UNITY_INTERFACE_EXPORT RTCErrorType
+    PeerConnectionSetBitrate(PeerConnectionObject* obj, const unity::webrtc::BitrateSettings* settings)
+    {
+        return obj->SetBitrate(*settings);
+    }
+
     UNITY_INTERFACE_EXPORT char* PeerConnectionGetConfiguration(PeerConnectionObject* obj)
     {
         const std::string str = obj->GetConfiguration();

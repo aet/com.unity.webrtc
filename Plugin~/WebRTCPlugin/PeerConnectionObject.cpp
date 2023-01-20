@@ -236,6 +236,22 @@ namespace webrtc
         return error.type();
     }
 
+    webrtc::RTCErrorType PeerConnectionObject::SetBitrate(const BitrateSettings& settings)
+    {
+        ::webrtc::BitrateSettings _settings;
+
+        _settings.min_bitrate_bps = settings.minBitrateBps;
+        _settings.start_bitrate_bps = settings.startBitrateBps;
+        _settings.max_bitrate_bps = settings.maxBitrateBps;
+
+        const auto error = connection->SetBitrate(_settings);
+        if (!error.ok())
+        {
+            LogPrint(rtc::LoggingSeverity::LS_ERROR, error.message());
+        }
+        return error.type();
+    }
+
     std::string PeerConnectionObject::GetConfiguration() const
     {
         auto _config = connection->GetConfiguration();

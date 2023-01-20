@@ -441,6 +441,11 @@ namespace Unity.WebRTC
             return NativeMethods.PeerConnectionSetConfiguration(GetSelfOrThrow(), str);
         }
 
+        public RTCErrorType SetBitrate(ref BitrateSettings settings)
+        {
+            return NativeMethods.PeerConnectionSetBitrate(GetSelfOrThrow(), ref settings);
+        }
+
         /// <summary>
         /// This constructor creates an instance of peer connection with a default configuration.
         /// </summary>

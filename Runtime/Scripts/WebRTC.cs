@@ -580,6 +580,14 @@ namespace Unity.WebRTC
     }
 
     [Serializable]
+    public struct BitrateSettings
+    {
+        public int minBitrateBps;
+        public int startBitrateBps;
+        public int maxBitrateBps;
+    }
+
+    [Serializable]
     struct RTCConfigurationInternal
     {
         public RTCIceServer[] iceServers;
@@ -1272,6 +1280,8 @@ namespace Unity.WebRTC
         public static extern void PeerConnectionRestartIce(IntPtr ptr);
         [DllImport(WebRTC.Lib)]
         public static extern RTCErrorType PeerConnectionSetConfiguration(IntPtr ptr, [MarshalAs(UnmanagedType.LPStr, SizeConst = 256)] string conf);
+        [DllImport(WebRTC.Lib)]
+        public static extern RTCErrorType PeerConnectionSetBitrate(IntPtr ptr, ref BitrateSettings settings);
         [DllImport(WebRTC.Lib)]
         public static extern IntPtr ContextCreateDataChannel(IntPtr ptr, IntPtr ptrPeer, [MarshalAs(UnmanagedType.LPStr, SizeConst = 256)] string label, ref RTCDataChannelInitInternal options);
         [DllImport(WebRTC.Lib)]

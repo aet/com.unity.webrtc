@@ -48,6 +48,7 @@ namespace webrtc
 
         bool GetSessionDescription(const SessionDescriptionInterface* sdp, RTCSessionDescription& desc) const;
         RTCErrorType SetConfiguration(const std::string& config);
+        RTCErrorType SetBitrate(const BitrateSettings& config);
         std::string GetConfiguration() const;
         void CreateOffer(const RTCOfferAnswerOptions& options, CreateSessionDescriptionObserver* observer);
         void CreateAnswer(const RTCOfferAnswerOptions& options, CreateSessionDescriptionObserver* observer);
